@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    
+    private bool counted = false;
     public float destructionDelay = 3;
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,11 @@ public class Collectable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the collided object has the tag you are looking for, e.g., "Ground"
-        if (other.CompareTag("Counter"))
+        if ((!counted) && other.CompareTag("Counter") )
         {
             // Call the IncrementCount method on the Counter instance
             Counter.Instance.IncrementCount();
+            counted = true;
         }
     }
     private void OnCollisionEnter(Collision collision)

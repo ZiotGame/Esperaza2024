@@ -51,7 +51,7 @@ MonoBehaviour:
   Offset: {x: 0, y: 0, z: 0}
   previousHash:
     serializedVersion: 2
-    Hash: d8902cb38b04a0b1979bf3bd7309d6fa
+    Hash: 397794cdcc0f6dabd71904a3fc90436b
 --- !u!114 &1827865666134470760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     - SurfaceNormal: {x: 0, y: 0, z: 1}
       SurfaceTextureDirection: {x: 0, y: 1, z: 0}
   meshDetailsList:
-  - Id: -39800
+  - Id: 54136
     Transform: {fileID: 7819434202414354598}
     MeshFilter: {fileID: 6569606642453552899}
     OriginalSharedMesh: {fileID: -1463048430781114374, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
@@ -86,7 +86,7 @@ MonoBehaviour:
     MeshRenderer: {fileID: 8993434636032764873}
     SlicedVertHash:
       serializedVersion: 2
-      Hash: fdfb56c3bb11a3070fe35a57de34669d
+      Hash: 6069de7e2d7e5b17d7e941f3d19360fc
     SlicedUvHash:
       serializedVersion: 2
       Hash: 93c2fbfc7527e2cf5a927e6034776154
@@ -175,7 +175,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7480449666866399772}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fc41bb7d137bd6c4893a517c46009885, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -187,7 +187,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.39999995
+  m_Radius: 0.45
   m_Height: 11.39
   m_Direction: 1
   m_Center: {x: 0, y: 1.28, z: 0}

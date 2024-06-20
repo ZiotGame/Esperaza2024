@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Counter : MonoBehaviour
 {
     public static Counter Instance; // Singleton instance
-    private bool counted = false;
     public Text CounterText;
     private static int Count = 0;
 
@@ -17,23 +16,23 @@ public class Counter : MonoBehaviour
         if (Instance==null)
         {
             Instance = this;
-        }else
+            }else
         {
-           // Destroy(gameObject);
+            // Destroy(gameObject);
         }
     }
+    private void Update()
+    {
+    }
+
     private void Start()
     {
         Count = 0;
     }
     public void IncrementCount()
     {
-        if (!counted)
-        {
             Count += 1;
             CounterText.text = "Count : " + Count;
-            counted = true;
-        }
     }
   
 
