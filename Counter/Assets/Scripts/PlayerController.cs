@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             position.z -= speed * Time.deltaTime;
-            Debug.Log("A is pressed");
         }
         else if (Input.GetKey(KeyCode.D))
         {

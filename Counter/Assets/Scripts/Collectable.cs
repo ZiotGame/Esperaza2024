@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    
     public float destructionDelay = 3;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,15 @@ public class Collectable : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the collided object has the tag you are looking for, e.g., "Ground"
+        if (other.CompareTag("Counter"))
+        {
+            // Call the IncrementCount method on the Counter instance
+            Counter.Instance.IncrementCount();
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

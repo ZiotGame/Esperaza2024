@@ -6,18 +6,35 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
+    public static Counter Instance; // Singleton instance
+    private bool counted = false;
     public Text CounterText;
+    private static int Count = 0;
 
-    private int Count = 0;
-
+    private void Awake()
+    {
+        // Singleton pattern to ensure only one instance of the Counter exists
+        if (Instance==null)
+        {
+            Instance = this;
+        }else
+        {
+           // Destroy(gameObject);
+        }
+    }
     private void Start()
     {
         Count = 0;
     }
-
-    private void OnTriggerEnter(Collider other)
+    public void IncrementCount()
     {
-        Count += 1;
-        CounterText.text = "Count : " + Count;
+        if (!counted)
+        {
+            Count += 1;
+            CounterText.text = "Count : " + Count;
+            counted = true;
+        }
     }
+  
+
 }
