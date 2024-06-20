@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 public class Bouncer : MonoBehaviour
 {
+    public MMFeedbacks bounce; 
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class Bouncer : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        bounce?.PlayFeedbacks();
+        Debug.Log("has collide");
     }
 }
