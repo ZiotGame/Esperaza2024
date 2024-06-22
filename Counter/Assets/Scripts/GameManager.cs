@@ -32,12 +32,15 @@ public class GameManager : MonoBehaviour
             SetRandomObjectToSpawn();
             SpawnObject();
             SetRandomTimeToNextSpawn();
+        
         }
     }
     void SetRandomObjectToSpawn()
     {
-        objectArrayId = Random.Range(0,objectToSpawn.Length);
-        Debug.Log("Selected Object ID: " + objectArrayId + " (Prefab: " + objectToSpawn[objectArrayId].name + ")");
+        objectArrayId = GetWeightedRandomIndex(weights);
+        Debug.Log("objectArrayId:" + objectArrayId);
+        //objectArrayId = Random.Range(0,objectToSpawn.Length);
+        //Debug.Log("Selected Object ID: " + objectArrayId + " (Prefab: " + objectToSpawn[objectArrayId].name + ")");
 
     }
     void SetRandomTimeToNextSpawn()
@@ -52,10 +55,32 @@ public class GameManager : MonoBehaviour
             Random.Range(rangeYMin, rangeYMax),
             Random.Range(-spawnRange.z, spawnRange.z)
             );
-        Debug.Log("Spawning Object ID: " + objectArrayId + " at Position: " + randomPosition);
+        //Debug.Log("Spawning Object ID: " + objectArrayId + " at Position: " + randomPosition);
 
 
         Instantiate(objectToSpawn[objectArrayId],randomPosition,Quaternion.identity);
     }
+      int GetWeightedRandomIndex(int[] weights)
+    {
+        int totalWeight = 0;
+        for (int i = 0; i < weights.Length; i++)
+        {
+            totalWeight += weights[i];
+        }
 
+        int randomWeight = Random.Range(0, totalWeight);
+        int cumulativeWeight = 0;
+
+        for (int i = 0; i < weights.Length; i++)
+        {
+            cumulativeWeight += weights[i];
+            if (randomWeight < cumulativeWeight)
+            {
+                return i;
+            }
+        }
+
+        // Fallback in case something goes wrong
+        return 0;
+    }
 }
