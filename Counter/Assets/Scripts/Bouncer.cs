@@ -20,6 +20,5 @@ public class Bouncer : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         bounce?.PlayFeedbacks();
-        Debug.Log("has collide");
-    }
+           }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     private bool counted = false;
-    public float destructionDelay = 3;
+    private float destructionDelay = 3;
     // Start is called before the first frame update
     void Start()
     {
