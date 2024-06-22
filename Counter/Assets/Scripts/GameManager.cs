@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i=0; i < obstacleToSpawn.Length; i++) {
             Vector3 randomPosition = new(
-                Random.Range(-spawnObstacleRange.x, spawnObstacleRange.x),
+                spawnObstacleRange.x,
                 Random.Range(rangeObstacleYMin, rangeObstacleYMax),
                 Random.Range(-spawnObstacleRange.z, spawnObstacleRange.z)
                 ) ;

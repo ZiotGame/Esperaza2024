@@ -715,7 +715,7 @@ MonoBehaviour:
   - {fileID: 7169418972144823962, guid: e544f777766e32146a9566441c46bd59, type: 3}
   - {fileID: 7169418972144823962, guid: fe026df5e34f1fa408c4da057b813029, type: 3}
   - {fileID: 33360415512586635, guid: d9dd765f8aba17c4289fea6e7fcfa6e7, type: 3}
-  spawnObstacleRange: {x: 0, y: 10, z: 10}
+  spawnObstacleRange: {x: -3.3, y: 10, z: 4.5}
   rangeObstacleYMin: 5
   rangeObstacleYMax: 25
 --- !u!4 &260817301

@@ -10,15 +10,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1827865666134470760, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: meshDetailsList.Array.data[0].Id
-      value: -59500
+      value: -114852
       objectReference: {fileID: 0}
     - target: {fileID: 1827865666134470760, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: meshDetailsList.Array.data[0].SlicedVertHash
-      value: 5379b4beb0c6ffc27888641e67b8607e
+      value: d654d54a6d80ddc22bab3844d505d71b
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977067530623270004, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_Height
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 4977067530623270004, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: m_Radius
-      value: 0.82
+      value: 0.40000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977067530623270004, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_Center.x
+      value: -0.000000076293944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977067530623270004, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_Center.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977067530623270004, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7132167936186614185, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,7 +78,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747834309490014125, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: m_Name
-      value: ObstacleBig
+      value: ObstacleSizeM
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819434202414354598, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162414477360393786, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: Size.x
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 9162414477360393786, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: Size.y
@@ -74,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9162414477360393786, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: previousHash
-      value: 13982c80dfcc434161b2519efdc2f553
+      value: 264e3f16be294443d237f805b7ec5e60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

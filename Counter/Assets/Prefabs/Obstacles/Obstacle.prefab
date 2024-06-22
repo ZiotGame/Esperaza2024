@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7132167936186614185}
-  - component: {fileID: 9162414477360393786}
-  - component: {fileID: 1827865666134470760}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -34,62 +32,6 @@ Transform:
   - {fileID: 7819434202414354598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9162414477360393786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7747834309490014125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6b790d73e366344873a5c0fd7fe11f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Size: {x: 3.92, y: 1, z: 1}
-  Slices: {x: 0.64, y: 1, z: 1}
-  Offset: {x: 0, y: 0, z: 0}
-  previousHash:
-    serializedVersion: 2
-    Hash: e9069bd220dfd28b50df7332be1b92df
---- !u!114 &1827865666134470760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7747834309490014125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68d616ad4f0642c409a8c67a87289210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkipBoundsCalculation: 0
-  SkipVertices: 0
-  SkipUvs: 1
-  UvMappingSettings:
-    UvScale: {x: 1, y: 1}
-    SurfaceTextureOffset: {x: 0, y: 0, z: 0}
-    MappingMode: 0
-    GenerateInverseMappings: 0
-    Mappings:
-    - SurfaceNormal: {x: 1, y: 0, z: 0}
-      SurfaceTextureDirection: {x: 1, y: 0, z: 0}
-    - SurfaceNormal: {x: 0, y: 0, z: 1}
-      SurfaceTextureDirection: {x: 0, y: 1, z: 0}
-  meshDetailsList:
-  - Id: -57008
-    Transform: {fileID: 7819434202414354598}
-    MeshFilter: {fileID: 6569606642453552899}
-    OriginalSharedMesh: {fileID: -1463048430781114374, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
-    SlicedMesh: {fileID: 0}
-    MeshRenderer: {fileID: 8993434636032764873}
-    SlicedVertHash:
-      serializedVersion: 2
-      Hash: 96b8a0482e2fb8e4507c2d4858262472
-    SlicedUvHash:
-      serializedVersion: 2
-      Hash: 93c2fbfc7527e2cf5a927e6034776154
 --- !u!1001 &7714257723815098189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,7 +87,7 @@ PrefabInstance:
     - target: {fileID: -5754084199372789682, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -1463048430781114374, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
     - target: {fileID: 919132149155446097, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -158,11 +100,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4977067530623270004}
   m_SourcePrefab: {fileID: 100100000, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
---- !u!33 &6569606642453552899 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
-  m_PrefabInstance: {fileID: 7714257723815098189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7480449666866399772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
@@ -187,17 +124,12 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.45
-  m_Height: 11.39
+  m_Radius: 0.40000004
+  m_Height: 2.56
   m_Direction: 1
-  m_Center: {x: 0, y: 1.28, z: 0}
+  m_Center: {x: -0.000000076293944, y: 1.28, z: 0}
 --- !u!4 &7819434202414354598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
-  m_PrefabInstance: {fileID: 7714257723815098189}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &8993434636032764873 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 11b1925f71e662e4e805d3dbc3a1ee88, type: 3}
   m_PrefabInstance: {fileID: 7714257723815098189}
   m_PrefabAsset: {fileID: 0}
