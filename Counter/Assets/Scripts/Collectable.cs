@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    private GameManager gameManager;
     private bool counted = false;
     private float destructionDelay = 3;
+    public int countPoint;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    private void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +29,7 @@ public class Collectable : MonoBehaviour
         if ((!counted) && other.CompareTag("Counter") )
         {
             // Call the IncrementCount method on the Counter instance
-            Counter.Instance.IncrementCount();
+            Counter.Instance.IncrementCount(countPoint);
             counted = true;
         }
     }
@@ -31,8 +37,9 @@ public class Collectable : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
-
             Invoke("DestroyItself", destructionDelay);
+
+            gameManager.touchedGround = true;
         }
     }
     void DestroyItself()

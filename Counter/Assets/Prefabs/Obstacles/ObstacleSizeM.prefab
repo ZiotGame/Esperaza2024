@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7132167936186614185, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7132167936186614185, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -81,8 +81,20 @@ PrefabInstance:
       value: ObstacleSizeM
       objectReference: {fileID: 0}
     - target: {fileID: 7819434202414354598, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819434202414354598, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819434202414354598, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.63
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819434202414354598, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9162414477360393786, guid: 1b1910363620dec4d87d502e1ee0e0ec, type: 3}
       propertyPath: Size.x

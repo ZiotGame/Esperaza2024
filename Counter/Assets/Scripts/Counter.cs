@@ -16,9 +16,9 @@ public class Counter : MonoBehaviour
         if (Instance==null)
         {
             Instance = this;
-            }else
+        }else
         {
-            // Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
     private void Update()
@@ -29,9 +29,9 @@ public class Counter : MonoBehaviour
     {
         Count = 0;
     }
-    public void IncrementCount()
+    public void IncrementCount(int countPoint)
     {
-            Count += 1;
+            Count += countPoint;
             CounterText.text = "Count : " + Count;
     }
   

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     // Define weights for each object
     public int[] weights;
     public Vector3 spawnRange = new(0,10,10);
+    public int numberOfSpawn;
     public int rangeYMin = 6;
     public int rangeYMax = 20;
     public float minSpawnTime = 1.0f;
@@ -17,6 +18,9 @@ public class GameManager : MonoBehaviour
     public float rangeObstacleYMin;
     public float rangeObstacleYMax;
 
+    public bool touchedGround = false;
+    public bool touchedCounter = false;
+    private int spawned;
     private float timeToNextSpawn;
     private int objectArrayId;
     private int obstacleArradyId;
@@ -27,19 +31,20 @@ public class GameManager : MonoBehaviour
     {
         SetRandomTimeToNextSpawn();
         SetRandomObstacleToSpawn();
+        spawned = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         timeToNextSpawn -= Time.deltaTime;
-        if (timeToNextSpawn <=0)
+        if (timeToNextSpawn <=0 )
         {
             SetRandomObjectToSpawn();
             SpawnObject();
             SetRandomTimeToNextSpawn();
-        
         }
+        CheckGameEnd();
     }
     void SetRandomObjectToSpawn()
     {
@@ -61,25 +66,27 @@ public class GameManager : MonoBehaviour
         obstacleArradyId = Random.Range(0, obstacleToSpawn.Length);
 
         Instantiate(obstacleToSpawn[obstacleArradyId], randomPosition, Quaternion.identity);
-            Debug.Log(i);
         }
     }
     void SetRandomTimeToNextSpawn()
     {
-        timeToNextSpawn = Random.Range(minSpawnTime,maxSpawnTime);
-    }
+                    timeToNextSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+        }
 
     void SpawnObject()
     {
+        if (spawned < numberOfSpawn) { 
         Vector3 randomPosition = new(
             Random.Range(-spawnRange.x, spawnRange.x),
             Random.Range(rangeYMin, rangeYMax),
             Random.Range(-spawnRange.z, spawnRange.z)
             );
         //Debug.Log("Spawning Object ID: " + objectArrayId + " at Position: " + randomPosition);
-
-
-        Instantiate(objectToSpawn[objectArrayId],randomPosition,Quaternion.identity);
+        Instantiate(objectToSpawn[objectArrayId], randomPosition, Quaternion.identity);
+            spawned++;
+            Debug.Log("Number of Spawns:" + spawned);
+    }
+       
     }
       int GetWeightedRandomIndex(int[] weights)
     {
@@ -103,5 +110,11 @@ public class GameManager : MonoBehaviour
 
         // Fallback in case something goes wrong
         return 0;
+    }
+    void CheckGameEnd()
+    {
+        if (spawned == numberOfSpawn && touchedGround == true ) { 
+        Debug.Log("Game End");
+        }
     }
 }

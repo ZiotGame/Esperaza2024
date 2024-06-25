@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1451676220960466043, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1451676220960466043, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1451676220960466043, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1451676220960466043, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,13 +64,13 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7199015280046056315, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5485304556efe9f4b9430196898671b4, type: 2}
+    - target: {fileID: 4382063012569286136, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
+      propertyPath: countPoint
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8747797874962016854, guid: 810fb9bb609466445af3fc2c9ab71f00, type: 3}
       propertyPath: m_Name
-      value: Sphere02 1
+      value: Sphere02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
