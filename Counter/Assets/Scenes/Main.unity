@@ -707,7 +707,7 @@ MonoBehaviour:
   - {fileID: 1831325646540302020, guid: fade5d74dbaaede438e763040596c474, type: 3}
   weights: 0a000000050000000100000008000000
   spawnRange: {x: 0, y: 10, z: 5}
-  numberOfSpawn: 4
+  numberOfSpawn: 2
   rangeYMin: 24
   rangeYMax: 26
   minSpawnTime: 1
@@ -720,6 +720,9 @@ MonoBehaviour:
   spawnObstacleRange: {x: -3.3, y: 10, z: 4.5}
   rangeObstacleYMin: 5
   rangeObstacleYMax: 25
+  touchedGround: 0
+  touchedCounter: 0
+  spawned: 0
 --- !u!4 &260817301
 Transform:
   m_ObjectHideFlags: 0
