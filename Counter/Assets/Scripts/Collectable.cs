@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour
     {
 
     }
-  
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if the collided object has the tag you are looking for, e.g., "Ground"
@@ -35,8 +35,8 @@ public class Collectable : MonoBehaviour
         }
         if (other.CompareTag("Counter") && gameManager.numberOfSpawn == gameManager.spawned)
         {
-            //Invoke("CollectableTriggerEnd", destructionDelay);
-            CollectableTriggerEnd();
+
+            Invoke("CollectableTriggerEnd", destructionDelay);
         }
     }
 
@@ -44,13 +44,13 @@ public class Collectable : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
-            Invoke("DestroyItself", destructionDelay); 
+            Invoke("DestroyItself", destructionDelay);
         }
-       /* if (collision.collider.CompareTag("Ground") && gameManager.numberOfSpawn == gameManager.spawned)
-        {
-            CollectableTriggerEnd();
-        }*/
-        
+        /* if (collision.collider.CompareTag("Ground") && gameManager.numberOfSpawn == gameManager.spawned)
+         {
+             CollectableTriggerEnd();
+         }*/
+
 
     }
     void DestroyItself()

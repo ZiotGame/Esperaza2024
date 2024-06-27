@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
     public GameObject[] objectToSpawn;
     // Define weights for each object
     public int[] weights;
@@ -18,8 +22,7 @@ public class GameManager : MonoBehaviour
     public float rangeObstacleYMin;
     public float rangeObstacleYMax;
 
-    public bool touchedGround = false;
-    public bool touchedCounter = false;
+    public bool isGameActive = true;
     public int spawned;
     private float timeToNextSpawn;
     private int objectArrayId;
@@ -32,7 +35,7 @@ public class GameManager : MonoBehaviour
         SetRandomTimeToNextSpawn();
         SetRandomObstacleToSpawn();
         spawned = 0;
-   }
+    }
 
     // Update is called once per frame
     void Update()
@@ -114,5 +117,13 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         Debug.Log("Game End");
+        isGameActive = false;
+    }
+    public void RestartGame()
+    {
+
+        Debug.Log("Game Restart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 }
