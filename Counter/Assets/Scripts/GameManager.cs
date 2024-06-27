@@ -22,8 +22,9 @@ public class GameManager : MonoBehaviour
     public float rangeObstacleYMin;
     public float rangeObstacleYMax;
 
-    public bool isGameActive = true;
-    public int spawned;
+    public GameObject startScreen;
+    [HideInInspector] public bool isGameActive = false;
+    [HideInInspector] public int spawned;
     private float timeToNextSpawn;
     private int objectArrayId;
     private int obstacleArradyId;
@@ -35,6 +36,9 @@ public class GameManager : MonoBehaviour
         SetRandomTimeToNextSpawn();
         SetRandomObstacleToSpawn();
         spawned = 0;
+        isGameActive = true;
+        startScreen.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -118,6 +122,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game End");
         isGameActive = false;
+        startScreen.gameObject.SetActive(true);
     }
     public void RestartGame()
     {

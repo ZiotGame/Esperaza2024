@@ -37,6 +37,7 @@ public class Collectable : MonoBehaviour
         {
 
             Invoke("CollectableTriggerEnd", destructionDelay);
+            Debug.Log("max spawn and Collectable collided to Counter");
         }
     }
 
