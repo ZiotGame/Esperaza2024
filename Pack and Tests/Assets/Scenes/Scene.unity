@@ -10871,6 +10871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3885409893127675770, guid: ad2023437ff4e3243bf56b94719ac7f0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 737c6e4d8d67e284b9c77e17a34f70c4, type: 2}
     - target: {fileID: 9096431747090825117, guid: ad2023437ff4e3243bf56b94719ac7f0, type: 3}
       propertyPath: m_Name
       value: Sprites
