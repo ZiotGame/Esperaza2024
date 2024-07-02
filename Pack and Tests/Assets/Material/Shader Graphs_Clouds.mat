@@ -64,12 +64,12 @@ Material:
     m_Floats:
     - PixelSnap: 0
     - _EnableExternalAlpha: 0
-    - _Scale: 1
+    - _Scale: 1.1
     - _Speed: 1
     m_Colors:
     - _Color: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
-    - _Contrast: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
-    - _Direction: {r: 0.05, g: 0, b: 0, a: 0}
+    - _Contrast: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0}
+    - _Direction: {r: 0.2, g: 0, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -18,7 +18,10 @@ public class StormManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ChangeWeather();
+        }
     }
 
     public void HighlightsOn()
@@ -28,7 +31,7 @@ public class StormManager : MonoBehaviour
             if (highlight != null)
             {
                 highlight.SetActive(true);
-                StormFeedbacks.PlayFeedbacks();
+                StormFeedbacks.PlayFeedbacks(); 
             }
 
         }
@@ -43,5 +46,9 @@ public class StormManager : MonoBehaviour
             }
 
         }
+    }
+    public void ChangeWeather()
+    {
+        Debug.Log("Weather changed to...");
     }
 }

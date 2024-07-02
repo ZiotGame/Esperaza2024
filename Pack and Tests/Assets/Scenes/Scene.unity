@@ -5600,7 +5600,7 @@ ParticleSystemRenderer:
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
-  m_SortingFudge: -100
+  m_SortingFudge: -200
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 2
@@ -5761,7 +5761,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 60
-      minScalar: 20
+      minScalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10871,10 +10871,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3885409893127675770, guid: ad2023437ff4e3243bf56b94719ac7f0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 737c6e4d8d67e284b9c77e17a34f70c4, type: 2}
     - target: {fileID: 9096431747090825117, guid: ad2023437ff4e3243bf56b94719ac7f0, type: 3}
       propertyPath: m_Name
       value: Sprites
