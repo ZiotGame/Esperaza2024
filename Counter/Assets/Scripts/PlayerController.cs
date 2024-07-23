@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             position.z -= speed * Time.deltaTime;
+            Debug.Log("appuyé A");
         }
         else if (Input.GetKey(KeyCode.D))
         {
@@ -35,6 +36,5 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.position = position;
-
     }
 }
