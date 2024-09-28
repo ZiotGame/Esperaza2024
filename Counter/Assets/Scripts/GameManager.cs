@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    [Header("Collectables")]
     public GameObject[] objectToSpawn;
     // Define weights for each object
     public int[] weights;
@@ -17,18 +17,20 @@ public class GameManager : MonoBehaviour
     public int rangeYMax = 20;
     public float minSpawnTime = 1.0f;
     public float maxSpawnTime = 5.0f;
+    [Header("Obstacles")]
     public GameObject[] obstacleToSpawn;
     public Vector3 spawnObstacleRange = new(0, 0, 3.5f);
     public float rangeObstacleYMin;
     public float rangeObstacleYMax;
 
+    [Header("Canvas")]
     public GameObject startScreen;
-    [HideInInspector] public bool isGameActive = false;
+    [HideInInspector] public bool isGameActive;
     [HideInInspector] public int spawned;
     private float timeToNextSpawn;
     private int objectArrayId;
     private int obstacleArradyId;
-
+    public Button ButtonStart;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,8 @@ public class GameManager : MonoBehaviour
         spawned = 0;
         isGameActive = true;
         startScreen.gameObject.SetActive(false);
+       
+
 
     }
 
@@ -51,6 +55,7 @@ public class GameManager : MonoBehaviour
             SpawnObject();
             SetRandomTimeToNextSpawn();
         }
+        
     }
     void SetRandomObjectToSpawn()
     {
