@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
   m_Name: ScreenSpaceAmbientOcclusion
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   m_Settings:
     AOMethod: 1
     Downsample: 0
@@ -20,7 +20,7 @@ MonoBehaviour:
     Source: 1
     NormalSamples: 1
     Intensity: 1.09
-    DirectLightingStrength: 0.199
+    DirectLightingStrength: 0.414
     Radius: 0.035
     Samples: 1
     BlurQuality: 0
@@ -53,7 +53,8 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -8931882523046402609}
   - {fileID: 8248566919609575762}
-  m_RendererFeatureMap: cfa54c1e2b940b8452e95d1de9cb7872
+  - {fileID: 3192085723502740865}
+  m_RendererFeatureMap: cfa54c1e2b940b8452e95d1de9cb78728105fa990d914c2c
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -92,6 +93,50 @@ MonoBehaviour:
   m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &3192085723502740865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: RenderObjects
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: RenderObjects
+    Event: 300
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 4294967295
+      PassNames:
+      - Outline
+      - Silhouette
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideShader: {fileID: 0}
+    overrideShaderPassIndex: 0
+    overrideMode: 1
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
 --- !u!114 &8248566919609575762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71652c7dc452d9a4a8fadd9b92314bc6, type: 3}
   m_Name: Blit
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 300
     blitMaterial: {fileID: 2100000, guid: f473562db14bd0b42aa61cb8423b2d18, type: 2}
