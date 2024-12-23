@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CharacterBaseShiny
+    second: {fileID: 2100000, guid: 2938382c5396c6c43839fd06ad39f5c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mouth
     second: {fileID: 2100000, guid: 505a3d1c023828f4d92af5a0cd8045dc, type: 2}
   materials:
