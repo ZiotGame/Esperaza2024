@@ -1,0 +1,30 @@
+Ref from RMG
+According to my references, the daily quests comps have relatively the same layout. I don't want to change what seems to work in the competition, so I would work on slight improvement to avoid unecessary Tap.
+For this I added a clear button on each daily task. Bingo Clash has it, but I think the button is not perceived as a button.
+
+Ref from Casual games
+Great clarity and very playfull.
+A very interesting feature is that the player can execute directly the task from the Daily Quest screen.There is a button START on each quest
+
+Ref from other plateform
+Just had a look to see if they had something interesting. In games, I didn't see anything relevant for our project. In shopping App, I think there is some color contrast that can be interesting> White background and Orange buttons.
+
+The MPL Art test doesn't describe which I am suppose to create the comp for. Therefore I choose to make screen for a game like Bingo.
+
+Some of my intentions. I will describe only the screen related to the Daily Quests marked with the organe title. The other screens are just here to put things in contest. So I believe that the artist in charge to create the UI will have time for the task in half a day.
+
+
+Daily Quest
+I choose to make quests very similar to Blackout Bingo or Bingo Clash.
+Some beginner's quests to fidelize 
+
+
+Reward sequence
+
+Reward
+
+
+
+I in the beginners daily tasks to put
+- Make your first deposit > It's a big milestone for a player to put money in the game account, he should be rewarded for that.
+- Finish 6 games > I intent to increase the playtime with this simple reward. It's the opportunity for the game to showcase all the features.
